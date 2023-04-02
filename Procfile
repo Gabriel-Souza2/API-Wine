@@ -1,1 +1,1 @@
-web: gunicorn wineapi:index
+web: gunicorn app:app

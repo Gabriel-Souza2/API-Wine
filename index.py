@@ -27,4 +27,6 @@ def get_products_pagination():
 
     return make_response(jsonify(products))
 
-app.run()
+
+if __name__ == '__main__':
+    app.run()

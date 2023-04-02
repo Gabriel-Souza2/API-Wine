@@ -11,7 +11,7 @@ class Wine:
         self.db = firestore.client()
     
     def get_all(self): 
-        data = self.db.collection('Wine').order_by('id').limit(10).stream()
+        data = self.db.collection('Wine').order_by('id').stream()
         print(data)
         return self.__format_products(data)
 

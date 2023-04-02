@@ -9,7 +9,7 @@ wine = Wine()
 @app.route('/', methods=['GET'])
 def get_all_products():
 
-   return make_response(jsonify(wine.get_all()))
+    return make_response(jsonify(wine.get_all()))
 
 @app.route('/products', methods=['GET'])
 def get_products_pagination():

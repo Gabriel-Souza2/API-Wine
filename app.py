@@ -27,6 +27,11 @@ def get_products_pagination():
 
     return make_response(jsonify(products))
 
+@app.route('/products/total', methods=['GET'])
+def get_total_products():
+    return make_response(jsonify({
+        "total": wine.total_products()
+    }))
 
 if __name__ == '__main__':
     app.run()

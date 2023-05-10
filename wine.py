@@ -14,6 +14,11 @@ class Wine:
         data = self.db.collection('Wine').order_by('id').stream()
         return self.__format_products(data)
 
+    def get_by_id(self, id):
+        data = self.db.collection('Wine').where('id', '==', id).stream()
+        return self.__format_products(data)
+
+
     def paginate(self, page=1, limit=10):
         start = limit*page - (limit - 1)
         data = self.db.collection('Wine').order_by('id').start_at({
